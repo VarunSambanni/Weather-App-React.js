@@ -136,31 +136,32 @@ main {
 }
 
 .forecast {
-  margin-top: 38px;
+  margin-top: 2.2em;
   background-color: rgba(255, 255, 255, 0.2);
-  justify-content: center;
+  justify-content: left;
   position: relative;
-  padding: 0px;
-  height: auto;
+  padding-top:  1em ;
+  padding-bottom: 1em;
   align-items: center;
   display: flex;
+  flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
-  height: 270px;
-  bottom: 10px;
-  margin-right: 10%;
+  height: 17em;
+  bottom: 1em;
+  
 }
 
 .day {
   background-color: #b8b8b8;
-  margin: 1%;
+  margin: 1em;
   border: 0.1px solid #f0f0f0;
-  border-radius: 5px;
-  width: 100vh;
-  height: 210px;
-  font-size: 14px;
-  display: block;
-  padding: 10px;
+  border-radius: 0.4em;
+  width: 12em;
+  height: 15em;
+  font-size: 0.9rem;
+  padding: 0.5em;
   box-shadow: 1px 1px 1px #9e9e9e;
   color: black;
   text-align: center;
@@ -168,16 +169,18 @@ main {
   filter: brightness(110%);
   filter: contrast(120%);
   opacity: 0.95;
+  box-sizing: border-box;
 }
 .boxes {
-  padding: 2px;
+  padding: 0.2em;
 }
 .day:hover {
-  height: 220px;
   border: 0.5px solid #f0f0f0;
   box-shadow: 3px 3px 3px #9e9e9e;
   background-color: #757575;
-  font-size: 16px;
+  /*height: 15.15em;
+  font-size: 0.925rem;*/
+  transform: scale(1.08);
   color: #e0e0e0;
   box-shadow: 1px 1px 1px #c0daf2;
   opacity: 0.9;
@@ -195,45 +198,36 @@ main {
   text-shadow: 1px 1px 1px;
 }
 
-@media (max-device-width: 450px) {
+.day img {
+  height:8em;
+  width: auto;
+}
+
+
+@media (max-device-width: 500px) {
   .body {
     overflow: auto;
   }
   .search-box {
     width: 100%;
-    margin: 0 0 10px;
+    margin: 0 0 2em;
     margin-top: 3px;
   }
   .weather {
     font-size: 36px;
   }
-  .forecast {
-    height: 240px;
-    justify-content: left;
-    margin-top: 2vh;
-    background-color: rgba(255, 255, 255, 0.2);
-    overflow: auto;
-    margin-bottom: 1vh;
-    bottom: 0px;
+  
+  .forecast{
+    flex-direction: row;
+    align-items: flex-start;
   }
-  .day {
-    height: 180px;
-    font-size: 12px;
+
+  .day{
+    align-items: flex-start;
   }
-  .day:hover {
-    height: 190px;
-    box-shadow: 3px 3px 3px #9e9e9e;
-    transition: 0.3s ease;
-    background-color: #757575;
-    font-size: 13.8px;
-    color: #e0e0e0;
-  }
+
+
   .boxes {
     padding: 0px;
   }
-}
-
-.day img {
-  height: 100px;
-  width: auto;
 }
